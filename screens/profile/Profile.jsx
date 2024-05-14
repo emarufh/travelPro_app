@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import React from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+import reusable from "../../components/Reusable/reusable.style";
 
 const Profile = () => {
   return (
-    <View>
+    <SafeAreaView style={reusable.container}>
       <Text>Profile</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
 export default Profile;
-
-const styles = StyleSheet.create({});

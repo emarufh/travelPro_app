@@ -3,7 +3,7 @@ import { useFonts } from "expo-font";
 import * as Splashscreen from "expo-splash-screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Onboarding } from "./screens";
+import { CountryDetails, Onboarding, Recommended, Search } from "./screens";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
 
 const Stack = createStackNavigator();
@@ -38,6 +38,21 @@ export default function App() {
         <Stack.Screen
           name="Bottom"
           component={BottomTabNavigation}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Search"
+          component={Search}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="CountryDetails"
+          component={CountryDetails}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Recommended"
+          component={Recommended}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
