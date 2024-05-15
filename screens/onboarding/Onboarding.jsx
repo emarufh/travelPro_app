@@ -1,6 +1,5 @@
 import React from "react";
 import { FlatList } from "react-native";
-// import { Slides } from "../../components/index";
 import Slides from "../../components/Onboard/Slides";
 
 const Onboarding = () => {

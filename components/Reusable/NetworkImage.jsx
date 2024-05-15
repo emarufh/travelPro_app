@@ -1,5 +1,5 @@
-import { StyleSheet, Image } from "react-native";
 import React from "react";
+import { StyleSheet, Image } from "react-native";
 
 const NetworkImage = ({ source, width, height, radius }) => {
   return (

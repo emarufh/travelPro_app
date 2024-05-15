@@ -2,8 +2,8 @@ import React from "react";
 import { View } from "react-native";
 import reusable from "./reusable.style";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import WidthSpacer from "./WidthSpacer";
-import { ReusableText } from "../../components";
+import ReusableText from "../Reusable/ReusableText";
+import WidthSpacer from "../Reusable/WidthSpacer";
 
 const Rating = ({ rating }) => {
   return (

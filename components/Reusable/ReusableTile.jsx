@@ -1,20 +1,19 @@
 import React from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
-import reusable from "./reusable.style";
 import { COLORS, SIZES } from "../../constants/theme";
-import NetworkImage, {
-  HeightSpacer,
-  Rating,
-  ReusableText,
-  WidthSpacer,
-} from "../../components";
+import reusable from "./reusable.style";
+import NetworkImage from "../Reusable/NetworkImage";
+import HeightSpacer from "../Reusable/HeightSpacer";
+import Rating from "../Reusable/Rating";
+import ReusableText from "../Reusable/ReusableText";
+import WidthSpacer from "../Reusable/WidthSpacer";
 
 const ReusableTile = ({ item, onPress }) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
       <View style={reusable.rowWidthSpace("flex-start")}>
         <NetworkImage
-          source={item.imageUrl}
+          imgSource={item.imageUrl}
           width={80}
           height={80}
           radius={12}

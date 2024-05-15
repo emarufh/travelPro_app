@@ -1,16 +1,15 @@
 import React from "react";
 import { TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import reusable from "../../components/Reusable/reusable.style";
-import {
-  HeightSpacer,
-  Places,
-  ReusableText,
-  Recommendations,
-} from "../../components";
 import { TEXT, COLORS, SIZES } from "../../constants/theme";
 import { AntDesign } from "@expo/vector-icons";
 import styles from "./home.style";
+import reusable from "../../components/Reusable/reusable.style";
+import HeightSpacer from "../../components/Reusable/HeightSpacer";
+import ReusableText from "../../components/Reusable/ReusableText";
+import Places from "../../components/Home/Places";
+import Recommendations from "../../components/Home/Recommendations";
+import BestHotels from "../../components/Home/BestHotels";
 
 const Home = ({ navigation }) => {
   return (
@@ -46,6 +45,10 @@ const Home = ({ navigation }) => {
         <HeightSpacer height={15} />
 
         <Recommendations />
+
+        <HeightSpacer height={30} />
+
+        <BestHotels />
       </View>
     </SafeAreaView>
   );

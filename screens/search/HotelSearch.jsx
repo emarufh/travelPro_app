@@ -1,14 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const Search = () => {
+const HotelSearch = () => {
   return (
     <View>
-      <Text>Search</Text>
+      <Text>HotelSearch</Text>
     </View>
   );
 };
 
-export default Search;
+export default HotelSearch;
 
 const styles = StyleSheet.create({});

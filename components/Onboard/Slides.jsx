@@ -1,9 +1,11 @@
-import { Image, View } from "react-native";
 import React from "react";
-import styles from "./slides.style";
-import { HeightSpacer, ReusableButton, ReusableText } from "../index";
-import { COLORS, SIZES } from "../../constants/theme";
+import { Image, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import styles from "./slides.style";
+import { COLORS, SIZES } from "../../constants/theme";
+import ReusableText from "../Reusable/ReusableText";
+import HeightSpacer from "../Reusable/HeightSpacer";
+import ReusableButton from "../Reusable/ReusableButton";
 
 const Slides = ({ item }) => {
   const navigation = useNavigation();
