@@ -5,9 +5,19 @@ import { COLORS, TEXT } from "../../constants/theme";
 import reusable from "./reusable.style";
 import ReusableText from "../Reusable/ReusableText";
 
-const AppBar = ({ title, color, color1, icon, onPress, onPress1 }) => {
+const AppBar = ({
+  title,
+  color,
+  color1,
+  icon,
+  onPress,
+  onPress1,
+  top,
+  left,
+  right,
+}) => {
   return (
-    <View style={styles.overlay}>
+    <View style={styles.overlay(top, left, right)}>
       <View style={reusable.rowWidthSpace("space-between")}>
         <TouchableOpacity style={styles.box(color)} onPress={onPress}>
           <AntDesign name="left" size={20} />
@@ -31,13 +41,13 @@ const AppBar = ({ title, color, color1, icon, onPress, onPress1 }) => {
 export default AppBar;
 
 const styles = StyleSheet.create({
-  overlay: {
+  overlay: (top, left, right) => ({
     position: "absolute",
-    top: 10,
-    left: 0,
-    right: 0,
+    top: top,
+    left: left,
+    right: right,
     justifyContent: "center",
-  },
+  }),
   box: (color) => ({
     backgroundColor: color,
     width: 30,

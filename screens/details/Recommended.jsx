@@ -69,6 +69,9 @@ const Recommended = ({ navigation }) => {
           icon={"search1"}
           onPress={() => navigation.goBack()}
           onPress1={() => navigation.navigate("Search")}
+          top={10}
+          left={0}
+          right={0}
         />
       </View>
 
