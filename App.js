@@ -13,6 +13,7 @@ import {
   PlaceDetails,
   Recommended,
   Search,
+  SelectRoom,
 } from "./screens";
 
 const Stack = createStackNavigator();
@@ -82,6 +83,11 @@ export default function App() {
         <Stack.Screen
           name="HotelSearch"
           component={HotelSearch}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SelectRoom"
+          component={SelectRoom}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

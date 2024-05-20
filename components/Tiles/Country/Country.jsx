@@ -1,7 +1,7 @@
 import React from "react";
 import { View, TouchableOpacity } from "react-native";
-import { COLORS, TEXT } from "../../../constants/theme";
 import { useNavigation } from "@react-navigation/native";
+import { COLORS, TEXT } from "../../../constants/theme";
 import HeightSpacer from "../../Reusable/HeightSpacer";
 import ReusableText from "../../Reusable/ReusableText";
 import NetworkImage from "../../Reusable/NetworkImage";
