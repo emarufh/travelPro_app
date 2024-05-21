@@ -4,7 +4,6 @@ import { useNavigation } from "@react-navigation/native";
 import ReusableTile from "../../components/Reusable/ReusableTile";
 
 const PopularList = ({ data }) => {
-  console.log(data);
   const navigation = useNavigation();
 
   const renderItem = ({ item }) => (

@@ -21,8 +21,11 @@ const styles = StyleSheet.create({
   input: {
     fontFamily: "regular",
     width: "100%",
-    height: 50,
-    paddingHorizontal: 50,
+    height: 47,
+    paddingHorizontal: 30,
+    backgroundColor: COLORS.lightWhite,
+    borderRadius: SIZES.medium,
+    marginHorizontal: 2,
   },
   searchBtn: {
     width: 50,
