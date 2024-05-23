@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import { COLORS, SIZES } from "../../constants/theme";
+// import { transparent } from "react-native-paper/lib/typescript/styles/themes/v2/colors";
 
 const styles = StyleSheet.create({
   searchContainer: {
@@ -12,20 +13,30 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.medium,
     marginVertical: SIZES.medium,
     height: 50,
+    backgroundColor: COLORS.white,
   },
   searchWrapper: {
     flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
     marginRight: SIZES.small,
     borderRadius: SIZES.small,
+    paddingLeft: 10,
   },
   input: {
     fontFamily: "regular",
     width: "100%",
-    height: 47,
-    paddingHorizontal: 30,
-    backgroundColor: COLORS.lightWhite,
+    height: 50,
+    paddingHorizontal: 10,
+    backgroundColor: "transparent",
+    // underlineStyle: "transparent",
+    // underlineColor: "transparent",
     borderRadius: SIZES.medium,
     marginHorizontal: 2,
+  },
+  clearBtn: {
+    position: "absolute",
+    right: 10,
   },
   searchBtn: {
     width: 50,

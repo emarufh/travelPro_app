@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TextInput } from "react-native-paper";
-import { Feather } from "@expo/vector-icons";
+import { Feather, MaterialIcons } from "@expo/vector-icons";
 import reusable from "../../components/Reusable/reusable.style";
 import { COLORS } from "../../constants/theme";
 import styles from "./search.style";
@@ -74,12 +74,17 @@ const HotelSearch = ({ navigation }) => {
     },
   ];
 
+  const handleClearSearch = () => {
+    setSearchKey("");
+    setSearchResults([]);
+  };
+
   return (
     <SafeAreaView>
       {/* <ScrollView> */}
       <View style={{ height: 50 }}>
         <AppBar
-          title={"Look for hotels"}
+          title={"Look for Hotels"}
           color={COLORS.white}
           color1={COLORS.white}
           icon={"filter"}
@@ -96,9 +101,27 @@ const HotelSearch = ({ navigation }) => {
           <TextInput
             style={styles.input}
             value={searchKey}
-            onChangeText={setSearchKey}
-            placeholder="Where do you want to stay?"
+            onChangeText={(text) => {
+              setSearchKey(text);
+            }}
+            placeholder="Where do you want to visit?"
+            underlineColorAndroid="transparent"
+            theme={{
+              colors: {
+                primary: "transparent",
+                underlineColor: "transparent",
+              },
+            }}
           />
+
+          {searchKey.length > 0 && (
+            <TouchableOpacity
+              onPress={handleClearSearch}
+              style={styles.clearBtn}
+            >
+              <MaterialIcons name="clear" size={20} color={COLORS.grey} />
+            </TouchableOpacity>
+          )}
         </View>
 
         <TouchableOpacity style={styles.searchBtn}>
@@ -107,6 +130,30 @@ const HotelSearch = ({ navigation }) => {
       </View>
 
       {hotels.length === 0 ? (
+        <View>
+          <HeightSpacer height={"20%"} />
+
+          <Image
+            source={require("../../assets/images/search.png")}
+            style={styles.searchImage}
+          />
+        </View>
+      ) : (
+        <FlatList
+          data={hotels}
+          keyExtractor={(item) => item._id}
+          renderItem={({ item }) => (
+            <View style={styles.tile}>
+              <ReusableTile
+                item={item}
+                onPress={() => navigation.navigate("PlaceDetails", item._id)}
+              />
+            </View>
+          )}
+        />
+      )}
+
+      {/* {hotels.length === 0 ? (
         <View>
           <HeightSpacer height={"20%"} />
 
@@ -130,16 +177,16 @@ const HotelSearch = ({ navigation }) => {
               />
             )}
           />
-          {/* {hotels.map((item) => (
-              <HotelCard
-                item={item}
-                key={item._id}
-                margin={10}
-                onPress={() => navigation.navigate("HotelDetails", item._id)}
-              />
-            ))} */}
+         // {hotels.map((item) => (
+          //    <HotelCard
+           //     item={item}
+           //    key={item._id}
+            //    margin={10}
+            //    onPress={() => navigation.navigate("HotelDetails", item._id)}
+            //  />
+           // ))} 
         </View>
-      )}
+      )} */}
       {/* </ScrollView> */}
     </SafeAreaView>
   );

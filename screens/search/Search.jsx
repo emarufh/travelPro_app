@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
+import { FlatList, Image, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TextInput } from "react-native-paper";
-import { Feather } from "@expo/vector-icons";
+import { Feather, MaterialIcons } from "@expo/vector-icons";
 import reusable from "../../components/Reusable/reusable.style";
 import { COLORS } from "../../constants/theme";
 import styles from "./search.style";
@@ -66,6 +66,11 @@ const Search = ({ navigation }) => {
     },
   ];
 
+  const handleClearSearch = () => {
+    setSearchKey("");
+    setSearchResults([]);
+  };
+
   return (
     <SafeAreaView style={reusable.container}>
       <View style={styles.searchContainer}>
@@ -73,9 +78,27 @@ const Search = ({ navigation }) => {
           <TextInput
             style={styles.input}
             value={searchKey}
-            onChangeText={setSearchKey}
+            onChangeText={(text) => {
+              setSearchKey(text);
+            }}
             placeholder="Where do you want to visit?"
+            underlineColorAndroid="transparent"
+            theme={{
+              colors: {
+                primary: "transparent",
+                underlineColor: "transparent",
+              },
+            }}
           />
+
+          {searchKey.length > 0 && (
+            <TouchableOpacity
+              onPress={handleClearSearch}
+              style={styles.clearBtn}
+            >
+              <MaterialIcons name="clear" size={20} color={COLORS.grey} />
+            </TouchableOpacity>
+          )}
         </View>
 
         <TouchableOpacity style={styles.searchBtn}>

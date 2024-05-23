@@ -52,7 +52,8 @@ const HotelDetails = ({ navigation }) => {
         user: {
           _id: "64c5d95adc7efae2a45ec376",
           username: "John Doe",
-          profile: "",
+          profile:
+            "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         },
         updatedAt: "2023-08-09T13:09:09.200Z",
       },
@@ -64,7 +65,8 @@ const HotelDetails = ({ navigation }) => {
         user: {
           _id: "64c5d95adc7efae2a45ec376",
           username: "John Doe",
-          profile: "",
+          profile:
+            "https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         },
         updatedAt: "2023-08-09T13:09:09.200Z",
       },
@@ -163,7 +165,7 @@ const HotelDetails = ({ navigation }) => {
             color={COLORS.black}
           />
 
-          <HeightSpacer height={15} />
+          <HeightSpacer height={10} />
 
           <ReusableText
             text={hotel.location}
@@ -173,6 +175,8 @@ const HotelDetails = ({ navigation }) => {
           />
 
           <HotelMap coordinates={coordinates} />
+
+          <HeightSpacer height={15} />
 
           <View style={reusable.rowWidthSpace("space-between")}>
             <ReusableText
@@ -187,7 +191,7 @@ const HotelDetails = ({ navigation }) => {
             </TouchableOpacity>
           </View>
 
-          <HeightSpacer height={10} />
+          <HeightSpacer height={15} />
 
           <ReviewList reviews={hotel.reviews} />
         </View>

@@ -1,6 +1,7 @@
 import React from "react";
+import { Platform } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Home, Chat, Profile, Location } from "../screens";
+import { Home, Chat, Location } from "../screens";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../constants/theme";
 import TopTab from "./TopTab";
@@ -8,7 +9,7 @@ import TopTab from "./TopTab";
 const Tab = createBottomTabNavigator();
 
 const tabBarStyle = {
-  paddind: 20,
+  padding: 22,
   borderRadius: 20,
   height: 80,
   position: "absolute",
@@ -26,6 +27,7 @@ const BottomTabNavigation = () => {
       headerShown={false}
       inactiveColor="#3e2465"
       barStyle={{ paddingBottom: 40 }}
+      screenOptions={{ headerShown: false }}
     >
       <Tab.Screen
         name="Home"
@@ -33,12 +35,12 @@ const BottomTabNavigation = () => {
         options={{
           tabBarStyle: tabBarStyle,
           tabBarShowLabel: false,
-          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? "grid" : "grid-outline"}
               color={focused ? COLORS.red : COLORS.gray}
               size={26}
+              style={{ marginBottom: Platform.OS === "android" ? 22 : 0 }}
             />
           ),
         }}
@@ -50,12 +52,12 @@ const BottomTabNavigation = () => {
         options={{
           tabBarStyle: tabBarStyle,
           tabBarShowLabel: false,
-          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? "location" : "location-outline"}
               color={focused ? COLORS.red : COLORS.gray}
               size={26}
+              style={{ marginBottom: Platform.OS === "android" ? 22 : 0 }}
             />
           ),
         }}
@@ -67,7 +69,6 @@ const BottomTabNavigation = () => {
         options={{
           tabBarStyle: tabBarStyle,
           tabBarShowLabel: false,
-          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={
@@ -75,6 +76,7 @@ const BottomTabNavigation = () => {
               }
               color={focused ? COLORS.red : COLORS.gray}
               size={26}
+              style={{ marginBottom: Platform.OS === "android" ? 22 : 0 }}
             />
           ),
         }}
@@ -86,12 +88,12 @@ const BottomTabNavigation = () => {
         options={{
           tabBarStyle: tabBarStyle,
           tabBarShowLabel: false,
-          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? "person" : "person-outline"}
               color={focused ? COLORS.red : COLORS.gray}
               size={26}
+              style={{ marginBottom: Platform.OS === "android" ? 22 : 0 }}
             />
           ),
         }}

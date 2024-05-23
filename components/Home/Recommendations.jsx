@@ -18,6 +18,8 @@ const Recommendations = () => {
       location: "New York, USA",
       imageUrl:
         "https://d326fntlu7tb1e.cloudfront.net/uploads/731e1f89-c028-43ef-97ee-8beabde696b6-vinci_01_disney.jpg",
+      // imageUrl:
+      //   "https://images.playground.com/b137ddcd99594903ac73652c1ac85e22.jpeg",
       rating: 4.7,
       review: "1204 Reviews",
     },

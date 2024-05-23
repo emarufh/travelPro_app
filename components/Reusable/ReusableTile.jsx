@@ -9,11 +9,13 @@ import ReusableText from "../Reusable/ReusableText";
 import WidthSpacer from "../Reusable/WidthSpacer";
 
 const ReusableTile = ({ item, onPress }) => {
+  // console.log("Data: ", item.imageUrl);
+
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
       <View style={reusable.rowWidthSpace("flex-start")}>
         <NetworkImage
-          imgSource={item.imageUrl}
+          source={item.imageUrl}
           width={80}
           height={80}
           radius={12}

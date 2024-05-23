@@ -54,14 +54,14 @@ const PlaceDetails = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ScrollView>
         <View>
           <NetworkImage
             source={place.imageUrl}
             width={"100%"}
-            height={350}
-            radius={30}
+            height={SIZES.height * 0.4}
+            radius={0}
           />
 
           <AppBar
@@ -71,7 +71,7 @@ const PlaceDetails = ({ navigation }) => {
             icon={"search1"}
             onPress={() => navigation.goBack()}
             onPress1={() => {}}
-            top={20}
+            top={50}
             left={10}
             right={10}
           />
@@ -120,7 +120,7 @@ const PlaceDetails = ({ navigation }) => {
           </View>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
