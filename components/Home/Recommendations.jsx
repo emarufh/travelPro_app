@@ -18,8 +18,6 @@ const Recommendations = () => {
       location: "New York, USA",
       imageUrl:
         "https://d326fntlu7tb1e.cloudfront.net/uploads/731e1f89-c028-43ef-97ee-8beabde696b6-vinci_01_disney.jpg",
-      // imageUrl:
-      //   "https://images.playground.com/b137ddcd99594903ac73652c1ac85e22.jpeg",
       rating: 4.7,
       review: "1204 Reviews",
     },
@@ -46,7 +44,7 @@ const Recommendations = () => {
     {
       _id: "64d09f90364e1c37c8b4b140",
       country_id: "64c62bfc65af9f8c969a8d04",
-      title: "Yellowstone National Park",
+      title: "Redstone National Park",
       location: "New York, USA",
       imageUrl:
         "https://d326fntlu7tb1e.cloudfront.net/uploads/f3f44363-f250-4002-88a8-19fe79169cc7-geyser-yelowstone-burst_h.webp",
@@ -56,7 +54,7 @@ const Recommendations = () => {
     {
       _id: "64d30f789d008909fa8b7ce5",
       country_id: "64d2fd32618522e2fb342eec",
-      title: "Yellowstone National Park",
+      title: "Redstone National Park",
       location: "New York, USA",
       imageUrl:
         "https://d326fntlu7tb1e.cloudfront.net/uploads/f3f44363-f250-4002-88a8-19fe79169cc7-geyser-yelowstone-burst_h.webp",

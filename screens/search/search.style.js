@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
 import { COLORS, SIZES } from "../../constants/theme";
-// import { transparent } from "react-native-paper/lib/typescript/styles/themes/v2/colors";
 
 const styles = StyleSheet.create({
   searchContainer: {
@@ -29,8 +28,6 @@ const styles = StyleSheet.create({
     height: 50,
     paddingHorizontal: 10,
     backgroundColor: "transparent",
-    // underlineStyle: "transparent",
-    // underlineColor: "transparent",
     borderRadius: SIZES.medium,
     marginHorizontal: 2,
   },

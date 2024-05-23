@@ -13,27 +13,7 @@ const Places = () => {
         "The USA is a tourist magnet, known for its diverse landscapes, rich history, and vibrant culture. From the sun-kissed beaches of California to the bustling streets of New York City, there's something for every traveler.The USA is a tourist magnet, known for its diverse landscapes, rich history, and vibrant culture. From the sun-kissed beaches of California to the bustling streets of New York City, there's something for every traveler.The USA is a tourist magnet, known for its diverse landscapes, rich history, and vibrant culture. From the sun-kissed beaches of California to the bustling streets of New York City, there's something for every traveler.The USA is a tourist magnet, known for its diverse landscapes, rich history, and vibrant culture. From the sun-kissed beaches of California to the bustling streets of New York City, there's something for every traveler.",
       imageUrl:
         "https://d326fntlu7tb1e.cloudfront.net/uploads/1bcdbbd0-d702-475d-92ea-d9171c041674-vinci_01_places_new_york.jpg",
-      // imageUrl:
-      //   "https://images.playground.com/b137ddcd99594903ac73652c1ac85e22.jpeg",
       region: "North America, USA",
-    },
-    {
-      _id: "64cf2c565d14628d0ac0a2b7",
-      country: "Pakistan",
-      description:
-        "Pakistan is a country located in South Asia. It shares borders with India, Afghanistan, Iran, and China. The country is known for its diverse culture, rich history, and breathtaking landscapes. From the mighty peaks of the Karakoram mountain range to the vast deserts of Thar, Pakistan offers a wide range of geographical wonders. Its cities, like Karachi, Lahore, and Islamabad, are bustling hubs of activity, blending modernity with tradition. Pakistan has a deep-rooted history, with ancient civilizations like the Indus Valley civilization leaving their mark. The country is also famous for its delicious cuisine, warm hospitality, and vibrant festivals.",
-      imageUrl:
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/7528d77c-a022-4160-bdba-601e9f76cf33-vinvi_05_pakistan.jpg",
-      region: "South Asia, Pakistan",
-    },
-    {
-      _id: "64cf2c935d14628d0ac0a2b9",
-      country: "India",
-      description:
-        "India is a vast and diverse country in South Asia. It is known for its cultural heritage, historical landmarks, and geographical variety. The country boasts a rich history that dates back thousands of years, with influences from various civilizations. India's landscape ranges from the snowy peaks of the Himalayas to the lush greenery of Kerala's backwaters. The Taj Mahal, Jaipur's palaces, and the ancient temples of Varanasi are just a few of the country's iconic landmarks. Indian cuisine is famous worldwide, offering a symphony of flavors and spices. With its bustling cities, serene villages, and colorful festivals, India presents a kaleidoscope of experiences for travelers.",
-      imageUrl:
-        "https://d326fntlu7tb1e.cloudfront.net/uploads/f39f32a0-f484-4b4f-b8c4-3e8405743a20-vinci_02_india.jpg",
-      region: "South Asia, India",
     },
     {
       _id: "64cf2d095d14628d0ac0a2bd",
@@ -52,6 +32,24 @@ const Places = () => {
       imageUrl:
         "https://d326fntlu7tb1e.cloudfront.net/uploads/45e7d539-23c4-4b9a-91c8-1b0dec6e2ae9-vinci_04_china.jpg",
       region: "East Asia, China",
+    },
+    {
+      _id: "64cf2c935d14628d0ac0a2b9",
+      country: "India",
+      description:
+        "India is a vast and diverse country in South Asia. It is known for its cultural heritage, historical landmarks, and geographical variety. The country boasts a rich history that dates back thousands of years, with influences from various civilizations. India's landscape ranges from the snowy peaks of the Himalayas to the lush greenery of Kerala's backwaters. The Taj Mahal, Jaipur's palaces, and the ancient temples of Varanasi are just a few of the country's iconic landmarks. Indian cuisine is famous worldwide, offering a symphony of flavors and spices. With its bustling cities, serene villages, and colorful festivals, India presents a kaleidoscope of experiences for travelers.",
+      imageUrl:
+        "https://d326fntlu7tb1e.cloudfront.net/uploads/f39f32a0-f484-4b4f-b8c4-3e8405743a20-vinci_02_india.jpg",
+      region: "South Asia, India",
+    },
+    {
+      _id: "64cf2c565d14628d0ac0a2b7",
+      country: "Pakistan",
+      description:
+        "Pakistan is a country located in South Asia. It shares borders with India, Afghanistan, Iran, and China. The country is known for its diverse culture, rich history, and breathtaking landscapes. From the mighty peaks of the Karakoram mountain range to the vast deserts of Thar, Pakistan offers a wide range of geographical wonders. Its cities, like Karachi, Lahore, and Islamabad, are bustling hubs of activity, blending modernity with tradition. Pakistan has a deep-rooted history, with ancient civilizations like the Indus Valley civilization leaving their mark. The country is also famous for its delicious cuisine, warm hospitality, and vibrant festivals.",
+      imageUrl:
+        "https://d326fntlu7tb1e.cloudfront.net/uploads/7528d77c-a022-4160-bdba-601e9f76cf33-vinvi_05_pakistan.jpg",
+      region: "South Asia, Pakistan",
     },
   ];
 

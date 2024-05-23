@@ -4,9 +4,7 @@ import { COLORS, SIZES, TEXT } from "../../../constants/theme";
 import HeightSpacer from "../../Reusable/HeightSpacer";
 import ReusableText from "../../Reusable/ReusableText";
 import NetworkImage from "../../Reusable/NetworkImage";
-// import NetworkImage from "../../Reusable/NetworkImage";
 import Rating from "../../Reusable/Rating";
-import { Image } from "react-native";
 
 const HotelCard = ({ item, margin, onPress }) => {
   return (
@@ -19,8 +17,6 @@ const HotelCard = ({ item, margin, onPress }) => {
           radius={16}
         />
       </View>
-
-      {/* <HeightSpacer height={2} /> */}
 
       <View style={{ padding: 10 }}>
         <ReusableText

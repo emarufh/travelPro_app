@@ -46,6 +46,7 @@ const CountryDetails = ({ navigation }) => {
     ],
     region: "North America, USA",
   };
+
   return (
     <View style={styles.container}>
       <ScrollView>

@@ -1,9 +1,10 @@
 import { StyleSheet } from "react-native";
+import { Platform } from "react-native";
 
 const reusable = StyleSheet.create({
   container: {
     flex: 1,
-    marginHorizontal: 20,
+    marginHorizontal: Platform.OS === "android" ? 5 : 10,
   },
   rowWidthSpace: (justifyContent) => ({
     flexDirection: "row",

@@ -16,9 +16,7 @@ const BestHotels = () => {
       country_id: "64c62bfc65af9f8c969a8d04",
       title: "Seaside Resort",
       imageUrl:
-        "https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg",
-      // imageUrl:
-      //   "https://d326fntlu7tb1e.cloudfront.net/uploads/f5cae706-9e63-4a7d-9fdd-f63f34b93f37-seaside.jpeg",
+        "https://d326fntlu7tb1e.cloudfront.net/uploads/f5cae706-9e63-4a7d-9fdd-f63f34b93f37-seaside.jpeg",
       rating: 4.9,
       review: "1204 Reviews",
       location: "Miami Beach, FL",
@@ -28,9 +26,7 @@ const BestHotels = () => {
       country_id: "64c62bfc65af9f8c969a8d04",
       title: "Mountain Lodge",
       imageUrl:
-        "https://img.freepik.com/free-photo/colorful-design-with-spiral-design_188544-9588.jpg",
-      // imageUrl:
-      //   "https://d326fntlu7tb1e.cloudfront.net/uploads/5da4db00-e83f-449a-a97a-b7fa80a5bda6-aspen.jpeg",
+        "https://d326fntlu7tb1e.cloudfront.net/uploads/5da4db00-e83f-449a-a97a-b7fa80a5bda6-aspen.jpeg",
       rating: 4.5,
       review: "12024 Reviews",
       location: "Aspen, CO",

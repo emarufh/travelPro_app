@@ -37,8 +37,8 @@ const TopTab = ({ navigation }) => {
             onPress={() => navigation.goBack()}
             onPress1={() => {}}
             top={50}
-            left={20}
-            right={20}
+            left={15}
+            right={15}
           />
 
           <View style={styles.profile}>

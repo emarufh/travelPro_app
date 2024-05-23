@@ -13,9 +13,9 @@ const tabBarStyle = {
   borderRadius: 20,
   height: 80,
   position: "absolute",
-  bottom: 20,
-  left: 20,
-  right: 20,
+  bottom: Platform.OS === "android" ? 15 : 20,
+  left: 10,
+  right: 10,
 };
 
 const BottomTabNavigation = () => {
