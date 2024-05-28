@@ -1,10 +1,21 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import ProfileTile from "../../components/Reusable/ProfileTile";
 
-const TopInfo = () => {
+const TopInfo = ({ navigation }) => {
   return (
-    <View>
-      <Text>TopInfo</Text>
+    <View style={{ margin: 20 }}>
+      <ProfileTile title={"Personal Information"} icon={"user"} />
+      <ProfileTile
+        title={"Payments"}
+        icon={"creditcard"}
+        onPress={() => navigation.navigate("Payments")}
+      />
+      <ProfileTile
+        title={"Settings"}
+        icon={"setting"}
+        onPress={() => navigation.navigate("Settings")}
+      />
     </View>
   );
 };

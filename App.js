@@ -10,10 +10,12 @@ import {
   HotelList,
   HotelSearch,
   Onboarding,
+  Payments,
   PlaceDetails,
   Recommended,
   Search,
   SelectRoom,
+  Settings,
 } from "./screens";
 
 const Stack = createStackNavigator();
@@ -88,6 +90,16 @@ export default function App() {
         <Stack.Screen
           name="SelectRoom"
           component={SelectRoom}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Payments"
+          component={Payments}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Settings"
+          component={Settings}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
