@@ -92,7 +92,7 @@ const HotelDetails = ({ navigation }) => {
           icon={"search1"}
           onPress={() => navigation.goBack()}
           onPress1={() => {}}
-          top={50}
+          top={55}
           left={20}
           right={20}
         />

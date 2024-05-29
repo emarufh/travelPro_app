@@ -36,7 +36,7 @@ const TopTab = ({ navigation }) => {
             icon={"logout"}
             onPress={() => navigation.goBack()}
             onPress1={() => {}}
-            top={50}
+            top={55}
             left={15}
             right={15}
           />

@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, View } from "react-native";
+import { Image, View, useWindowDimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import styles from "./slides.style";
 import { COLORS, SIZES } from "../../constants/theme";
@@ -9,10 +9,14 @@ import ReusableButton from "../Reusable/ReusableButton";
 
 const Slides = ({ item }) => {
   const navigation = useNavigation();
+  const { height, width } = useWindowDimensions();
 
   return (
-    <View style={styles.container}>
-      <Image source={item.image} style={styles.image} />
+    <View style={[styles.container, { height: "100%", width }]}>
+      <Image
+        source={item.image}
+        style={[styles.image, { height: "100%", width }]}
+      />
 
       <View style={styles.stack}>
         <ReusableText

@@ -6,6 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
 import {
   CountryDetails,
+  Failed,
   HotelDetails,
   HotelList,
   HotelSearch,
@@ -15,7 +16,9 @@ import {
   Recommended,
   Search,
   SelectRoom,
+  SelectedRoom,
   Settings,
+  Successful,
 } from "./screens";
 
 const Stack = createStackNavigator();
@@ -100,6 +103,21 @@ export default function App() {
         <Stack.Screen
           name="Settings"
           component={Settings}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SelectedRoom"
+          component={SelectedRoom}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Success"
+          component={Successful}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Fail"
+          component={Failed}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

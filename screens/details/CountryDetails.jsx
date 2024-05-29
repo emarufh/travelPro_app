@@ -1,5 +1,11 @@
 import React from "react";
-import { View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
+import {
+  View,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+  Platform,
+} from "react-native";
 import { useRoute } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Feather } from "@expo/vector-icons";
@@ -65,9 +71,9 @@ const CountryDetails = ({ navigation }) => {
             icon={"search1"}
             onPress={() => navigation.goBack()}
             onPress1={() => {}}
-            top={50}
-            left={10}
-            right={10}
+            top={55}
+            left={Platform.OS === "android" ? 15 : 10}
+            right={Platform.OS === "android" ? 15 : 10}
           />
         </View>
 
@@ -111,6 +117,8 @@ const CountryDetails = ({ navigation }) => {
               borderWidth={0}
               borderColor={COLORS.white}
             />
+
+            <View style={{ marginBottom: 20 }} />
           </View>
         </View>
       </ScrollView>

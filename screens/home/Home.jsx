@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, View } from "react-native";
+import { TouchableOpacity, View, Platform } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TEXT, COLORS, SIZES } from "../../constants/theme";
 import { AntDesign } from "@expo/vector-icons";
@@ -31,7 +31,7 @@ const Home = ({ navigation }) => {
           </TouchableOpacity>
         </View>
 
-        <HeightSpacer height={SIZES.xLarge} />
+        <HeightSpacer height={SIZES.large} />
 
         <ReusableText
           text={"Places"}
@@ -42,11 +42,11 @@ const Home = ({ navigation }) => {
 
         <Places />
 
-        <HeightSpacer height={15} />
+        <HeightSpacer height={Platform.OS === "android" ? 10 : 15} />
 
         <Recommendations />
 
-        <HeightSpacer height={30} />
+        <HeightSpacer height={Platform.OS === "android" ? 20 : 30} />
 
         <BestHotels />
       </View>

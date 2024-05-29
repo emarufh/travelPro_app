@@ -14,7 +14,7 @@ const tabBarStyle = {
   borderRadius: 20,
   height: 80,
   position: "absolute",
-  bottom: Platform.OS === "android" ? 15 : 20,
+  bottom: Platform.OS === "android" ? 10 : 20,
   left: 10,
   right: 10,
 };

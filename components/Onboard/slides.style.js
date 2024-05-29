@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, useWindowDimensions } from "react-native";
 import { COLORS, SIZES } from "../../constants/theme";
 
 const styles = StyleSheet.create({
@@ -7,15 +7,13 @@ const styles = StyleSheet.create({
     // backgroundColor: COLORS.black,
   },
   image: {
-    width: SIZES.width,
-    height: SIZES.height,
+    // width: SIZES.width,
+    // height: SIZES.height,
     resizeMode: "cover",
   },
   stack: {
     position: "absolute",
-    bottom: 60,
-    // marginBottom: 60,
-    // bottom: 0,
+    bottom: 50,
     marginHorizontal: 20,
   },
 });

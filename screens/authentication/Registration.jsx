@@ -1,14 +1,191 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Formik } from "formik";
+import * as Yup from "yup";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import styles from "./signin.style";
+import { COLORS, SIZES } from "../../constants/theme";
+import WidthSpacer from "../../components/Reusable/WidthSpacer";
+import HeightSpacer from "../../components/Reusable/HeightSpacer";
+import ReusableButton from "../../components/Reusable/ReusableButton";
+
+const validationSchema = Yup.object().shape({
+  email: Yup.string().email("Provide a valid email").required("Required"),
+
+  username: Yup.string()
+    .min(3, "Username must be at least 3 characters")
+    .required("Required"),
+
+  password: Yup.string()
+    .min(8, "Password must be at least 8 characters")
+    .required("Required"),
+});
 
 const Registration = () => {
+  const [loader, setLoader] = useState(false);
+  const [responseData, setResponseData] = useState(null);
+  const [obsecureText, setObsecureText] = useState(false);
+
   return (
-    <View>
-      <Text>Registration</Text>
+    <View style={styles.container}>
+      <Formik
+        initialValues={{ username: "", email: "", password: "" }}
+        validationSchema={validationSchema}
+        onSubmit={(value) => {
+          console.log(value);
+        }}
+      >
+        {({
+          handleChange,
+          touched,
+          handleSubmit,
+          values,
+          errors,
+          isValid,
+          setFieldTouched,
+        }) => (
+          <View>
+            <View style={styles.wrapper}>
+              <Text style={styles.label}>Username</Text>
+              <View>
+                <View
+                  style={styles.inputWrapper(
+                    touched.username ? COLORS.lightBlue : COLORS.lightGrey
+                  )}
+                >
+                  <MaterialCommunityIcons
+                    name="face-man-profile"
+                    size={20}
+                    color={COLORS.gray}
+                  />
+
+                  <WidthSpacer width={10} />
+
+                  <TextInput
+                    placeholder="Enter Username"
+                    onFocus={() => {
+                      setFieldTouched("username");
+                    }}
+                    onBlur={() => {
+                      setFieldTouched("username", "");
+                    }}
+                    value={values.username}
+                    onChangeText={handleChange("username")}
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    style={{ flex: 1 }}
+                  />
+                </View>
+                {touched.username && errors.username && (
+                  <Text style={styles.errorMessage}>{errors.username}</Text>
+                )}
+              </View>
+            </View>
+
+            <View style={styles.wrapper}>
+              <Text style={styles.label}>Email</Text>
+              <View>
+                <View
+                  style={styles.inputWrapper(
+                    touched.email ? COLORS.lightBlue : COLORS.lightGrey
+                  )}
+                >
+                  <MaterialCommunityIcons
+                    name="email-outline"
+                    size={20}
+                    color={COLORS.gray}
+                  />
+
+                  <WidthSpacer width={10} />
+
+                  <TextInput
+                    placeholder="Enter Email"
+                    onFocus={() => {
+                      setFieldTouched("email");
+                    }}
+                    onBlur={() => {
+                      setFieldTouched("email", "");
+                    }}
+                    value={values.email}
+                    onChangeText={handleChange("email")}
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    style={{ flex: 1 }}
+                  />
+                </View>
+                {touched.email && errors.email && (
+                  <Text style={styles.errorMessage}>{errors.email}</Text>
+                )}
+              </View>
+            </View>
+
+            <View style={styles.wrapper}>
+              <Text style={styles.label}>Password</Text>
+              <View>
+                <View
+                  style={styles.inputWrapper(
+                    touched.password ? COLORS.lightBlue : COLORS.lightGrey
+                  )}
+                >
+                  <MaterialCommunityIcons
+                    name="lock-outline"
+                    size={20}
+                    color={COLORS.gray}
+                  />
+
+                  <WidthSpacer width={10} />
+
+                  <TextInput
+                    placeholder="Enter Password"
+                    secureTextEntry={obsecureText}
+                    onFocus={() => {
+                      setFieldTouched("password");
+                    }}
+                    onBlur={() => {
+                      setFieldTouched("password", "");
+                    }}
+                    value={values.password}
+                    onChangeText={handleChange("password")}
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    style={{ flex: 1 }}
+                  />
+
+                  <TouchableOpacity
+                    onPress={() => {
+                      setObsecureText(!obsecureText);
+                    }}
+                  >
+                    <MaterialCommunityIcons
+                      name={obsecureText ? "eye-outline" : "eye-off-outline"}
+                      size={18}
+                    />
+                  </TouchableOpacity>
+                </View>
+                {touched.password && errors.password && (
+                  <Text style={styles.errorMessage}>{errors.password}</Text>
+                )}
+              </View>
+            </View>
+
+            <HeightSpacer height={20} />
+
+            <ReusableButton
+              onPress={() => {
+                handleSubmit();
+              }}
+              btnText={"Register"}
+              width={SIZES.width - 40}
+              textColor={COLORS.white}
+              backgroundColor={COLORS.green}
+              borderWidth={0}
+              borderColor={COLORS.green}
+            />
+          </View>
+        )}
+      </Formik>
     </View>
   );
 };
 
 export default Registration;
-
-const styles = StyleSheet.create({});
